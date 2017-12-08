@@ -27,3 +27,5 @@ notebook: build
 test: build
 	$(DOCKER) run -it -v $(SRC):/src/workspace -v $(DATA):/data --env KERAS_BACKEND=$(BACKEND) keras py.test $(TEST)
 
+spyder: build
+	$(DOCKER) run -it -v $(SRC):/src/workspace -e DISPLAY=$(DISPLAY) -v /tmp/.X11-unix:/tmp/.X11-unix -v $(DATA):/data --env KERAS_BACKEND=$(BACKEND) keras spyder3

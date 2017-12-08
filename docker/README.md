@@ -28,6 +28,9 @@ Build the container and start a bash
 
     $ make bash
 
+Build the container and start Spyder
+    $ make spyder
+
 For GPU support install NVIDIA drivers (ideally latest) and
 [nvidia-docker](https://github.com/NVIDIA/nvidia-docker). Run using
 
